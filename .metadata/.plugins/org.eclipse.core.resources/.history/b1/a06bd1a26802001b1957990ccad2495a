@@ -1,0 +1,131 @@
+/**
+ * 
+ * @author Suhas Julapalli
+ * Period 3
+ * 9/29/2020
+ *
+ */
+
+public class ArrayHelper {
+	
+	private String[] array;
+	
+	/**
+	 * Constructs an ArrayHelper object
+	 * @param array
+	 */
+	public ArrayHelper(String[] array)
+	{	this.array = array;		}
+	
+	/**
+	 * Add an item to the end of this.array
+	 */
+	public void add(String item)
+	{
+		String[] newArray = new String[this.array.length + 1];
+		
+		int i = 0;
+		for (String str : this.array) {
+			newArray[i] = str;
+		}
+			
+		newArray[newArray.length - 1] = item;
+		
+		this.array = newArray;
+		
+	}
+	
+	/**
+	 * Add an item at a given index of this.array
+	 * 
+	 * Throws an IllegalArgumentException if the index < 0 or 
+	 * 					index > array.length
+	 */
+	public void add(String item, int index)
+	{
+		if (index < 0 || index > this.array.length) {
+			throw new IllegalArgumentException();
+		}
+		
+		String[] temp = new String[this.array.length];
+		
+		for (int i = 0; i < index; i++) {
+			temp[i] = this.array[i];
+		}
+		temp[index] = item;
+		
+		for (int i = index + 1; i < array.length; i++) {
+			temp[i] = this.array[i - 1];
+		}
+		
+		this.array = temp;
+	}
+	
+	/**
+	 * Removes a given item from this.array.
+	 * 
+	 * array remains unchanged if the item is not an element of this.array.
+	 * @return true if a change was made, false otherwise
+	 */
+	public boolean remove(String item)
+	{
+		//your code goes here
+		return false;
+	}
+	
+	/**
+	 * Removes an item from this.array at a given index
+	 * 
+	 * Throws an ArrayIndexOutOfBoundsException if the index is not valid
+	 * @return true if a change was made, false otherwise
+	 */
+	public boolean remove(int index) throws ArrayIndexOutOfBoundsException
+	{
+		//your code goes here
+		return false;
+	}
+	
+	/**
+	 * Determines if an element exists in this.array
+	 * @return true if a element was found, false otherwise
+	 */
+	public boolean contains(String element)
+	{
+		//your code goes here
+		return false;
+	}
+	
+	/**
+	 * returns the index of an element in this.array or 
+	 * 					-1 if the element does not exist
+	 */
+	public int indexOf(String element)
+	{
+		//your code goes here
+		return 0;
+	}
+	
+	/**
+	 * @return a String representation of this.array
+	 */
+	public String toString()
+	{
+		if(array.length == 0) return "{}";
+		
+		String str = "{";
+		int i = 0;
+		for( ; i < array.length - 1; i++)
+		{
+			if(array[i] == null)
+				str += String.format("%s,", array[i]);
+			else
+				str += String.format("\"%s\",", array[i]);
+		}
+		if(array[i] == null)
+			str += String.format("%s}", array[i]);
+		else
+			str += String.format("\"%s\"}", array[i]);
+		return str;
+				
+	}
+}

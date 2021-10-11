@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;LinkedList.java&apos; to &apos;Binary Expression Tree/src/tree&apos;&#x0D;&#x0A;- Original project: &apos;Expression&apos;&#x0D;&#x0A;- Destination element: &apos;Binary Expression Tree/src/tree&apos;&#x0D;&#x0A;- Original element: &apos;PostfixEvaluation.LinkedList.java&apos;" description="Copy compilation unit" destination="=Binary Expression Tree/src&lt;tree" element1="/src&lt;PostfixEvaluation{LinkedList.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1610414078863" units="1" version="1.0"/>
+</session>
